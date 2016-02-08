@@ -1,4 +1,4 @@
-FROM bigbrozer/x2gobase
+FROM bigbrozer/x2go-base
 MAINTAINER Vincent BESANCON <besancon.vincent@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
