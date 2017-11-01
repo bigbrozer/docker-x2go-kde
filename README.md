@@ -13,3 +13,9 @@ Run with:
 ```shell
 $ docker run -d -P --name x2go-kde bigbrozer/x2go-kde
 ```
+
+Or to expose to the host's 2222
+```shell
+$ docker run -d -p 2222:22 -P --name x2go-kde2 bigbrozer/x2go-kde
+```
+
