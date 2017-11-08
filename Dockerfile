@@ -1,10 +1,14 @@
 FROM bigbrozer/x2go-base
-MAINTAINER Vincent BESANCON <besancon.vincent@gmail.com>
+
+LABEL authors="Vincent BESANCON <besancon.vincent@gmail.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
 
 # Install KDE suite
-RUN apt-get update -y && apt-get install -y plasma-desktop
+RUN set -x \
+      && apt-get update -y \
+      && apt-get install -y plasma-desktop \
+      && rm -rf /var/lib/apt/lists/*
 
 # Run it
 EXPOSE 22
